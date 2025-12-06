@@ -8,7 +8,7 @@ Instructions:
 3. Run `node wd_checker.js 1 your_email_here` to verify and get your key.
 */
 
-const name = "faqun"; // <-- change this
+const name = "faqun@mailbox.org"; // <-- change this
 
 // === TASK 1 ===
 // Return an HTML string with your name embedded inside an <h1> tag.
@@ -21,29 +21,29 @@ function createHTML(name) {
 // Return a CSS string that changes the background to a color based on name length.
 // Example: if name.length % 2 == 0 => "background-color: blue;", else "background-color: green;"
 function createCSS(name) {
-    if (name.length % 2 == 0) {
-            return "background-color: blue;"
-    }
-    else {
-            return "background-color: green;"
-    }
+    //if (name.length % 2 == 0) {
+     //       return "background-color: blue;"
+    //}
+   // else {
+  //          return "background-color: green;"
+ // }
 }
 
 // === TASK 3 ===
 // Simulate DOM manipulation: replace "Hello" with your name in "Hello World".
 function changeDOM(name) {
     // an aux DOM element with text content
-    let element = { textContent: "Hello World" };
+    // let element = { textContent: "Hello World" };
     // use replace Function to replace "Hello"
-    element.textContent = element.textContent.replace("Hello", name);
-    return element.textContent;
+    // element.textContent = element.textContent.replace("Hello", name);
+    // return element.textContent;
 }
 
 // === TASK 4 ===
 // Combine HTML and CSS into a single string (HTML first, then <style>CSS</style>)
 function combineHTMLCSS(name) {
     // combine both functions in a string
-    return createHTML(name)+ "<style>" + createCSS(name) + "</style>";
+  // return createHTML(name)+ "<style>" + createCSS(name) + "</style>";
 }
 
 module.exports = { name, createHTML, createCSS, changeDOM, combineHTMLCSS };

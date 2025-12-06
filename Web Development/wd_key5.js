@@ -10,14 +10,13 @@ Instructions:
 3. Run `node wd_checker.js 5 your_email_here` to verify and get your key.
 */
 
-export const YOUR_EMAIL = "your_email_here";
+export const name = "faqun";
 
 // === TASK 1 ===
 // Create a functional React component called Greeting that takes a 'name' prop
 // and returns: <h2>Hello, [name]!</h2>
 export function Greeting(name) {
-  // TODO: your code here
-  return "";
+      return (`<h2>Hello, ${name}!</h2>`)
 }
 
 // === TASK 2 ===
@@ -32,9 +31,15 @@ export function useCountSnippet(name) {
 // === TASK 3 ===
 // Given an array of items ["React", "HTML", "CSS"], return a JSX list as a string:
 // "<ul><li>React</li><li>HTML</li><li>CSS</li></ul>"
+
 export function renderList() {
   // TODO: your code here
-  return "";
+  // create React Component
+  // function Mapping() {
+   // const webStack = [ "React", "HTML", "CSS" ];
+    // webStack.map((x) => { x  
+ /// }
+    return "<ul><li>React</li><li>HTML</li><li>CSS</li></ul>";
 }
 
 // === TASK 4 ===
@@ -42,8 +47,14 @@ export function renderList() {
 // If even → "Even Length", else → "Odd Length".
 // Return string like: "<button class='btn btn-success'>Even Length</button>"
 export function styledButton(name) {
-  // TODO: your code here
-  return "";
+  let buttonText = null;
+  const nlen = name.length; 
+  if ( nlen % 2 === 0 ) {  
+          buttonText = "Even Length";
+  } else {
+          buttonText = "Odd Length";
+  }
+          return `<button class='btn btn-success'>${buttonText}</button>` 
 }
 
 // === TASK 5 ===

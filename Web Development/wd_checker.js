@@ -96,7 +96,7 @@ function check_wd_key5(name, mod) {
       ? "<button class='btn btn-success'>Even Length</button>"
       : "<button class='btn btn-success'>Odd Length</button>";
   const fullTrue = `<div>${greetingTrue}${listTrue}${buttonTrue}</div>`;
-
+  
   try { if (mod.Greeting(name) === greetingTrue) score++; } catch {}
   try { if (mod.useCountSnippet(name) === hookTrue) score++; } catch {}
   try { if (mod.renderList() === listTrue) score++; } catch {}

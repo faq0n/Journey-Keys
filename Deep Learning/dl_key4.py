@@ -9,7 +9,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-your_id = "your_email_here"
+your_id = ""
 
 # === TASK 1 ===
 # Create dummy logits tensor of size (1,3) with values based on your name length.
@@ -43,4 +43,4 @@ solutions = {
     "compute_accuracy": compute_accuracy
 }
 
-check_quiz(quiz_id=104, name=your_id, solutions=solutions)
+check_quiz(quiz_id=4, name=your_id, solutions=solutions)
