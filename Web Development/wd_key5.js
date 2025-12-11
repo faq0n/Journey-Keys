@@ -34,12 +34,14 @@ export function useCountSnippet(name) {
 
 export function renderList() {
   // TODO: your code here
-  // create React Component
-  // function Mapping() {
-   // const webStack = [ "React", "HTML", "CSS" ];
-    // webStack.map((x) => { x  
- /// }
-    return "<ul><li>React</li><li>HTML</li><li>CSS</li></ul>";
+  // simulate React Component passing props with map
+  const webStack = [ "React", "HTML", "CSS" ];
+  const compElements = webStack.map((x) => { return `<li>${x}</li>`})   
+  let renderEl = "";
+  for (let i = 0; i < compElements.length; i++) {
+          renderEl += compElements[i];
+  }
+  return `<ul>${renderEl}</ul>`;
 }
 
 // === TASK 4 ===
@@ -47,14 +49,14 @@ export function renderList() {
 // If even → "Even Length", else → "Odd Length".
 // Return string like: "<button class='btn btn-success'>Even Length</button>"
 export function styledButton(name) {
-  let buttonText = null;
+  let buttonText = "";
   const nlen = name.length; 
   if ( nlen % 2 === 0 ) {  
           buttonText = "Even Length";
   } else {
           buttonText = "Odd Length";
   }
-          return `<button class='btn btn-success'>${buttonText}</button>` 
+  return `<button class='btn btn-success'>${buttonText}</button>`; 
 }
 
 // === TASK 5 ===
@@ -62,5 +64,5 @@ export function styledButton(name) {
 // "<div><h2>Hello, [name]!</h2><ul>...</ul><button>...</button></div>"
 export function fullComponent(name) {
   // TODO: your code here
-  return "";
+  return `<div>${Greeting(name)}${renderList()}${styledButton(name)}</div>`;
 }
